@@ -1,0 +1,716 @@
+## intent:cumprimentar
+- oi, tudo bem
+- oi, como vai voce
+- como vao as coisas
+- opa tudo bem
+- boa tarde
+- boa noite
+- bom dia
+- oi, bom dia
+- oi, boa tarde
+- oi, boa noite
+- eai
+- oie
+- ei
+- fala
+- tranquilo
+- tudo bom?
+- como voce esta
+- como voce ta
+- como vai você
+- como vai voce
+- como vai vc
+- como vai
+- como ta
+- joia
+- joinha
+- oi
+- olá
+- e aí
+- E aí?
+- De boa?
+- Oi
+- Opa
+- Olá
+- Ola
+- boa
+- aeee
+- ola
+- E ai mano
+- opa
+- fala meu querido
+- oi moço
+- olá rapaz
+- bom dia meu senhor
+- boa notie
+- e ai
+- Olá tudo bem?
+- Está tudo bem?
+- e aí?
+- E ai bot
+- Oi!
+- eai?
+- ol
+- Boa tarde
+- Olá!
+
+## intent:o_que_e_anamnese
+- o que é isso?
+- o que é anamnese?
+- anamnese?
+- que isso?
+- o q e isso?
+- não sei o que é
+- n sei oq é
+- n sei oqe
+- oq e
+- sei nem oq é
+- sei nem oqe
+- sei nem o que e
+- não faço a menor ideia do que é isso
+- não faço a menor ideia do que seja
+- não faço ideia, oq é?
+- o q é?
+- oq é?
+- pra que isso?
+- nunca ouvi falar?
+- q isso?
+- o que e anamneses?
+- o que e anamnese?
+- oq e anamnese?
+- sei nem oq e isso
+- O que é isso? 
+
+## intent:pergunta
+- porque?
+- porque
+- pq
+- pra que?
+- pra q?
+- pra q
+- pra que quer saber?
+- pq quer saber?
+- pq q saber?
+- por q?
+- pq precisa saber?
+- porque precisa sabe?
+- por quê?
+- por que?
+- ?
+- pq e importante?
+- pq e importante essa entrevista?
+- e daí?
+- oque quer saber mesmo?
+
+## intent:sexo
+- sou [homem]{"entity": "sexo", "value": "masculino"}
+- sexo masculino [homem]{"entity": "sexo", "value": "masculino"}
+- sou um [homem]{"entity": "sexo", "value": "masculino"}
+- [homem]{"entity": "sexo", "value": "masculino"}
+- sou [macho]{"entity": "sexo", "value": "masculino"}
+- Sexo [masculino]{"entity": "sexo", "value": "masculino"}
+- [Masculino]{"entity": "sexo", "value": "masculino"}
+- [masculino]{"entity": "sexo", "value": "masculino"}
+- [masc]{"entity": "sexo", "value": "masculino"}
+- [menino]{"entity": "sexo", "value": "masculino"}
+- [garoto]{"entity": "sexo", "value": "masculino"}
+- [macho]{"entity": "sexo", "value": "masculino"}
+- eu sou [homem]{"entity": "sexo", "value": "masculino"}
+- [m]{"entity": "sexo", "value": "masculino"}
+- [M]{"entity": "sexo", "value": "masculino"}
+- sou [mulher]{"entity": "sexo", "value": "feminino"}
+- sexo [feminino]{"entity": "sexo", "value": "masculino"}
+- sou uma [mulher]{"entity": "sexo", "value": "feminino"}
+- [mulher]{"entity": "sexo", "value": "feminino"}
+- [fêmea]{"entity": "sexo", "value": "feminino"}
+- sou [fêmea]{"entity": "sexo", "value": "feminino"}
+- [feminino]{"entity": "sexo", "value": "feminino"}
+- [fem]{"entity": "sexo", "value": "feminino"}
+- [menina]{"entity": "sexo", "value": "feminino"}
+- [garota]{"entity": "sexo", "value": "feminino"}
+- [Feminino]{"entity": "sexo", "value": "feminino"}
+- eu sou [mulher]{"entity": "sexo", "value": "feminino"}
+- [f]{"entity": "sexo", "value": "feminino"}
+- [F]{"entity": "sexo", "value": "feminino"}
+- [transgênero]{"entity": "sexo", "value": "outro_genero"}
+- [trans]{"entity": "sexo", "value": "outro_genero"}
+- [travesti]{"entity": "sexo", "value": "outro_genero"}
+- [transexual]{"entity": "sexo", "value": "outro_genero"}
+- [andrógena]{"entity": "sexo", "value": "outro_genero"}
+- [Andrógeno]{"entity": "sexo", "value": "outro_genero"}
+- [Pangênero]{"entity": "sexo", "value": "outro_genero"}
+- [sem gênero]{"entity": "sexo", "value": "outro_genero"}
+- [assexual]{"entity": "sexo", "value": "outro_genero"}
+- [Transexual]{"entity": "sexo", "value": "outro_genero"}
+- [outro]{"entity": "sexo", "value": "outro_genero"}
+- [prefiro não dizer]{"entity": "sexo", "value": "outro_genero"}
+
+## intent:escolaridade
+- [ensino fundamental](escolaridade)
+- [ensino fundamental incompleto](escolaridade)
+- [ensino fundamental completo](escolaridade)
+- [ensino básico](escolaridade)
+- [ensino básico incompleto](escolaridade)
+- [ensino superior](escolaridade)
+- [ensino superior cursando](escolaridade)
+- [ensino superior incompleto](escolaridade)
+- [ensino superior completo](escolaridade)
+- cursando [ensino superior](escolaridade)
+- eu sou [mestre em tecnologia da informação](escolaridade)
+- eu faço [doutorado em psicologia](escolaridade)
+- [mestrado](escolaridade)
+- [doutorado](escolaridade)
+- [ensino médio](escolaridade)
+- [fundamental](escolaridade)
+- [médio](escolaridade)
+- [superior](escolaridade)
+- [pós](escolaridade)
+- [pós graduação em radiologia](escolaridade)
+- [Ensino superior completo](escolaridade)
+- [pre](escolaridade)
+- [pré](escolaridade)
+- [ensino medio](escolaridade)
+- [mestrado em neurociencia](escolaridade)
+- [pos graduacao em artes cenicas](escolaridade)
+- ainda to no [ensino medio](escolaridade)
+- [mestrado em ciencia da computacao](escolaridade)
+- [pos graduacao](escolaridade)
+- [graduando em analise de sistema](escolaridade)
+- [cursando ensino medio](escolaridade)
+- [mestrando em medicina](escolaridade)
+- sou [doutorando em ciencia da computação](escolaridade)
+- [Pós Graduação](escolaridade)
+- [superior incompleto](escolaridade)
+- [Segundo grau completo](escolaridade)
+- [Ensino médio](escolaridade)
+- [Ensino Superior Completo](escolaridade)
+- [Superior Completo](escolaridade)
+- [analfabeto](escolaridade)
+- [mestrando](escolaridade)
+- [superior](escolaridade)
+- [mba](escolaridade)
+- [especialização](escolaridade)
+- [formação](escolaridade)
+- [Bacharelado](escolaridade)
+- [Licenciatura](escolaridade)
+- [Tecnólogo](escolaridade)
+- [Mestrado](escolaridade)
+- [Doutorado](escolaridade)
+- [Pós-doutorado](escolaridade)
+- [Master in Business Administration](escolaridade)
+
+## intent:profissao
+- sou [professor](profissao)
+- [professor](profissao)
+- minha profissão é [desenvolvedor](profissao)
+- eu sou [desenvolvedor](profissao)
+- [desenvolvedor](profissao)
+- trabalho com [desenvolvimento](profissao)
+- [médico](profissao)
+- [aluno](profissao)
+- [administrador](profissao)
+- [design](profissao)
+- [Gestor](profissao)
+- [empreendedor](profissao)
+- [concursado](profissao)
+- [desempregado](profissao)
+- não trabalho no momento
+- [corretor imobiliário](profissao)
+- [Engenheiro](profissao)
+- sou [recepcionista](profissao)
+- [Biologo](profissao)
+- [modelo](profissao)
+- [advogado](profissao)
+- [atendente](profissao)
+- [fisioterapeuta](profissao)
+- [dj](profissao)
+- [Estudante](profissao)
+- [Fisioterapeuta](profissao)
+- [Pedreiro](profissao)
+- [Gari](profissao)
+- [sudoca](profissao)
+- [político](profissao)
+- [Lutador](profissao)
+- [barman](profissao)
+- [biomédico](profissao)
+- [químico](profissao)
+- [Administrador](profissao)
+- [Agropecuarista](profissao)
+- [Contabilista](profissao)
+- [Economista](profissao)
+- [Especialista em comércio exterior](profissao)
+- [Chef](profissao)
+- [Gerente comercial](profissao)
+- [Gestor de recursos humanos](profissao)
+- [Gestor de turismo](profissao)
+- [Gestor público](profissao)
+- [Hoteleiro](profissao)
+- [Piloto de avião](profissao)
+- [Turismólogo](profissao)
+- [Animador](profissao)
+- [Arquiteto](profissao)
+- [Artista plástico](profissao)
+- [Ator](profissao)
+- [Dançarino](profissao)
+- [Designer](profissao)
+- [Designer de interiores](profissao)
+- [Designer de moda](profissao)
+- [Fotógrafo](profissao)
+- [Historiador](profissao)
+- [Músico](profissao)
+- [Produtor cênico](profissao)
+- [Agrônomo](profissao)
+- [Bioquímico](profissao)
+- [Biotecnólogo](profissao)
+- [Ecologista](profissao)
+- [Geofísico](profissao)
+- [Geólogo](profissao)
+- [Gestor ambiental](profissao)
+- [Veterinário](profissao)
+- [Meteorologista](profissao)
+- [Oceanógrafo](profissao)
+- [Zootecnólogo](profissao)
+- [Astrônomo](profissao)
+- [Cientista da computação](profissao)
+- [Programador](profissao)
+- [Estatístico](profissao)
+- [Físico](profissao)
+- [Matemático](profissao)
+- [Nanotecnólogo](profissao)
+- [Químico](profissao)
+- [Advogado](profissao)
+- [Arqueólogo](profissao)
+- [Cooperativista](profissao)
+- [Filósofo](profissao)
+- [Geógrafo](profissao)
+- [Linguista](profissao)
+- [Museologista](profissao)
+- [Pedagogo](profissao)
+- [Gestor de tráfego](profissao)
+- [Produtor](profissao)
+- [Copywriter](profissao)
+- [Escritor](profissao)
+- [Professor](profissao)
+- [Psicopedagogo](profissao)
+- [Relações internacionais](profissao)
+- [Sociólogo](profissao)
+- [Teólogo](profissao)
+- [Tradutor](profissao)
+- [intérprete](profissao)
+- [Arquivologista](profissao)
+- [Biblioteconomista](profissao)
+- [Educomunicador](profissao)
+- [Jornalista](profissao)
+- [Produtor audiovisual](profissao)
+- [Produtor cultural](profissao)
+- [Produtor editorial](profissao)
+- [Produtor multimídia](profissao)
+- [Produtor publicitário](profissao)
+- [Publicitário](profissao)
+- [Radialista](profissao)
+- [Relações públicas](profissao)
+- [Secretária](profissao)
+- [Secretária executiva](profissao)
+- [Agricultor](profissao)
+- [Construtor civil](profissao)
+- [Construtor naval](profissao)
+- [Engenheiro ambiental e sanitário](profissao)
+- [Engenheiro biomédico](profissao)
+- [Engenheiro civil](profissao)
+- [Engenheiro da computação](profissao)
+- [Engenheiro de petróleo](profissao)
+- [Engenheiro de produção](profissao)
+- [Engenheiro de segurança do trabalho](profissao)
+- [Engenheiro de sistemas](profissao)
+- [Engenheiro de software](profissao)
+- [Engenheiro de telecomunicações](profissao)
+- [Engenheiro eletrônico](profissao)
+- [Engenheiro físico](profissao)
+- [Engenheiro mecânico](profissao)
+- [Engenheiro químico](profissao)
+- [Trader](profissao)
+- [Minerador](profissao)
+- [Silvicultor](profissao)
+- [Biomédico](profissao)
+- [Dentista](profissao)
+- [Educador físico](profissao)
+- [Enfermeiro](profissao)
+- [Esteticista](profissao)
+- [Farmacêutico](profissao)
+- [Fonoaudiólogo](profissao)
+- [Gerontólogo](profissao)
+- [Gestor em saúde](profissao)
+- [Gestor hospitalar](profissao)
+- [Médico](profissao)
+- [Musicoterapeuta](profissao)
+- [Massagista](profissao)
+- [Nutricionista](profissao)
+- [Psicólogo](profissao)
+- [Radiologista](profissao)
+- [Terapeuta ocupacional](profissao)
+- [empresario](profissao)
+- [engenheiro](profissao)
+- [Neurocientista](profissao)
+- sou [empresario](profissao)
+- sou [ator](profissao)
+- [estudante](profissao)
+- sou [médica](profissao)
+- sou [psicologa](profissao)
+- sou [estagiário](profissao)
+- sou [aluna](profissao)
+- sou [pedagoga](profissao)
+- [pedreiro](profissao)
+- [empresario](profissao)
+
+## intent: sintoma_febre
+- [febre](febre)
+- estou com [febre](febre)
+- corpo muito quente
+- acho que tô com [febre](febre)
+- minha temperatura mede 37,8°C 
+- estou com 37,8°C, acho que estou com [febre](febre)
+- suor
+- tremedeira
+- perda de apetite
+- desidratação
+- fraqueza no corpo
+- [fraqueza](febre) nos ossos
+- dores musculares
+- me sinto [cansado](febre) pra tudo
+- sinto [cansaço](febre) e não tenho vontade de fazer nada
+
+## intent: sintoma_dor
+- sinto [dor](dor) no lado esquerdo
+- [doi](dor) muito minha cabeça
+- [doi](dor) no corpo todo
+- sinto [dor](dor) no corpo todo
+- tô com [dor](dor) de [garganta e [doi](dor) até pra beber água
+- minha lombar [doi](dor) toda vez que abaixo
+- [Dor](dor) em [região cervical posterior, trapézio e rombóides. Nos membros superiores o incômodo é em região do antebraço parte medial e lateral. Sinto [formigamento](sinal_sintoma) e [dor](sinal_sintoma) constante.
+- sinto muita dor toda vez que agacho
+- meus [dentes [doem](dor) quando como algo gelado
+- sinto fortes [dores](dor) de [cabeça quando uso computador por muito tempo
+- Tenho [dores](dor) frequentes nas [costas e nos [joelhos
+- minha cervical e membros superiores [doem](dor) muito sempre que me exercito
+- forte [dor](dor) na [cabeça na parte lateral quando não uso meus óculos
+- [dor](dor) forte na barriga toda vez que como pimenta durante as refeições
+- tenho muito dificuldade porque sinto muita [dor](dor) nos ossos
+- [dor](dor) muito forte e desconforto na parte genital quando me exercito
+- eu trabalho a noite e sinto muita [dor](dor) de [ouvido por causa do som alto
+- [dor](dor) de [dente quando como algo duro ou gelado
+- [dor](dor) forte na perna esquerda depois que cai da escada
+- [dor](dor) no [braço esquerdo pq dormi em cima dele
+- meu peito ta [doendo](dor) muito pq eu tava correndo e cai de bicicleta
+- [dor](dor) forte na virilha quando abro muito a perna
+- [dor](dor) forte no cisto toda vez que limpo a casa e lavo louça
+- sinto muita [dor](dor) nos ossos. Mal consigo pegar peso ou me exercitar
+- muita [dor](dor) no dente depois q comi algo duro
+- tenho aura visual e após 15 minutos vem a [dor](dor) de cabeça
+- [dor](dor)
+- [Dor](dor) abdominal generalizada
+- [dor](dor) na coxa
+- [Dor](dor) na cervical e em membros superiores.
+- [dor](dor) de barriga
+
+## intent: sintoma_vomito
+- [vomito](vomito)
+- [vômito](vomito)
+- [vomitei](vomito)
+- eu [vomitei](vomito) depois do almoço
+- [vomitei](vomito) porque comi algo estragado
+- eu [vomitei](vomito) depois que almocei
+- comi algo estragado e [vomitei](vomito)
+- [Vômitos](vomito)
+
+## intent: outros_sintomas
+- sinto [nausea](sinal_sintoma) depois de tomar refri
+- sinto [falta de ar](sinal_sintoma)
+- fiquei com [falta de ar](sinal_sintoma) depois da academia
+- estou gravida e [sinto muito desconforto](sinal_sintoma)
+- tenho [pressão alta](sinal_sintoma) e me senti mal depois disso
+- estou [tossindo muito](sinal_sintoma) ultimamente.
+- estou [gripado](sinal_sintoma) com nariz entupido
+- desde criança tenho as crises, mas atualmente está mais frequente
+- tenho [enxaqueca](sinal_sintoma) em momentos exporádicos
+- Menstruação não desce ao final de uma semana
+- Sinto cansaço realizando um pequeno esforço, como fazer a cama
+- Choro diariamente e tenho [dificuldade em dormir](sinal_sintoma)
+- [Tenho manchas](sinal_sintoma) ou sinais na pele que aumentam de tamanho, formato ou de cor
+- Não consigo ler as legendas de um filme
+- Tenho de pôr a televisão alta e falar muito alto
+- estou sofrendo com [baixo desempenho sexual](sinal_sintoma) com minha parceira
+- [sou muito hiperativo](sinal_sintoma) quando como muito doce e tomo muito café
+- tenho [má alimentação](sinal_sintoma) e sinto muito fome, por causa disso eu como muito
+- [problema respiratório](sinal_sintoma) quando eu fico muito tempo eu lugares fechados
+- sinto [problema circulatório](sinal_sintoma) que me faz ficar tonto ao passear com meu cachorro
+- tenho problema na pele porque sinto muita [coceira](sinal_sintoma) e [alergia](sinal_sintoma)
+- tenho dificuldade em prestar atenção a uma só coisa e meu foco dispersa muito rápido
+- eu tenho [problemas psicológicos](sinal_sintoma) e isso tá afetando muito minha vida pessoal
+- toda vez sinto [ardência ao urinar](sinal_sintoma) quando fico muito tempo sem ingerir líquido
+- [ardência nos olhos](sinal_sintoma) quando deixo o brilho muito forte do meu celular ou tv
+- tenho sérios [problemas digestivos](sinal_sintoma) quando eu como o que é proibido pelo meu médico
+- desde que sofri o acidente de carro ano passado passei a sentir muita [ansiedade](sinal_sintoma)
+- eu sofro com [lesão no músculo](sinal_sintoma) devido ao estiramento que tive quando praticava esporte
+- uma [queimacao forte](sinal_sintoma) na barriga devido a comer muita pimenta no almoço
+- ardencia muito forte no olho esquerdo pq nao usei meus oculos
+- torci o pe quando tava descendo pela rua indo pro trabalho
+- acho que to com [infeccao urinaria](sinal_sintoma) pq eu notei que bebo pouca agua
+- tem um ano que notei meu cabelo diminuir de volume. Creio eu que ta caindo
+- o bico de papagaio me incomoda muito. Tenho ate dificuldade para levantar e deitar
+- Não há sintomas. Apenas precisa ser controlado o nível de glicose no sangue.
+- tenho [aura visual](sinal_sintoma) e depois dói a cabeça muito forte
+- [enxaqueca](sinal_sintoma)
+- [desmaio](sinal_sintoma)
+- [náusea](sinal_sintoma)
+- [falta de ar](sinal_sintoma)
+- [Gravidez](sinal_sintoma)
+- [Cefaleia](sinal_sintoma)
+- [hipertenso](sinal_sintoma)
+- [hipertensão](sinal_sintoma)
+- [Hipertensão](sinal_sintoma) sem complicações
+- [Erupção cutânea](sinal_sintoma) localizada
+- [Diabetes](sinal_sintoma) não insulino dependente
+- [Tosse](sinal_sintoma)
+- [Gripe](sinal_sintoma)
+- [Diarreia](sinal_sintoma)
+- [Secreção Vaginal](sinal_sintoma)
+- [cólicas](sinal_sintoma)
+- [Menstruação](sinal_sintoma) escassa e ausente
+- pélvis feminina
+- [Dificuldade respiratória](sinal_sintoma), [dispneia](sinal_sintoma)
+- sofrendo com [nauseas](sinal_sintoma) constantes
+- eu [desmaiei](sinal_sintoma)
+- [disfunção erétil](sinal_sintoma)
+- [incomodo](sinal_sintoma) na bacia
+- [desconforto](sinal_sintoma) no pé esquerdo
+- [mal-estar](sinal_sintoma)
+- [hiperativo](sinal_sintoma)
+- [vício](sinal_sintoma)
+- [problema respiratório](sinal_sintoma)
+- problema [Circulatório](sinal_sintoma)
+- problemas [Psicológicos](sinal_sintoma)
+- [baixo desempenho sexual](sinal_sintoma)
+- [ardência urinário](sinal_sintoma)
+- [ardência](sinal_sintoma) no olho
+- [lesão](sinal_sintoma) no músculo
+- [ansiedade](sinal_sintoma)
+- [depressão](sinal_sintoma)
+- [virose](sinal_sintoma)
+- [paranóia](sinal_sintoma)
+- [queimacao](sinal_sintoma) na barriga
+- [desconforto](sinal_sintoma) no pe
+- infeccao urinaria
+- meu cabelo ta caindo
+- sofro de osteoporose
+- costa
+- [Hiperglicemia](sinal_sintoma)
+- costas
+- Tenho [gastrite](sinal_sintoma) e [asia](sinal_sintoma)
+- Estômago
+- [Diabetes](sinal_sintoma)
+- Coluna
+- [Enxaqueca](sinal_sintoma)
+- [problema cardíaco](sinal_sintoma)
+- acabei [passando mal](sinal_sintoma) e senti muita asia
+- [passei mal](sinal_sintoma) depoios que comi muito
+- [gases](sinal_sintoma)
+
+## intent:afirmacao
+- sim
+- talvez
+- entendi
+- entendi sim
+- sim, entendi
+- s
+- ss
+- tá
+- beleza
+- quero
+- tudo bem
+- vamos
+- vamo
+- bora
+- pode ser
+- compreendi
+- compreendo
+- blz
+- claro
+- correto
+- exatamente
+- exato
+- aham
+- uhum
+- realmente
+- podemos
+- pode
+- Sim.
+- Entendi.
+- avmos
+- yes
+- si
+- vai lá
+- prossiga
+- podemos prosseguir
+- ok
+- certo
+- vamo la
+- vamos la
+- podemos sim
+- Tudo certo
+- Claro
+- Ok
+- ta
+- Beleza
+- OK
+- Sim
+- all right
+- vamos lá
+- vinha sim
+- oba
+- borá
+
+## intent:negacao
+- não
+- n
+- nn
+- nunca
+- nada
+- só isso
+- Não há sintomas
+- não sinto nada
+- não tem sintoma nenhum
+- aconteceu nada
+- foi só isso
+- discordo
+- negativo
+- mais ou menos
+- nao
+- nao conheco
+- não quero
+- escolhi errado
+- falei errado
+- duvida
+- ainda não sei
+- nenhum
+- jamais
+- Não
+
+## intent:obrigado
+- obrigado
+- valeu
+- opa, valeu!
+- obg
+- tchau
+- até mais!
+- ate
+- até
+- fechou!
+- inté
+- agradeço
+- obrigado!
+- ate mais
+- falou!
+- obrigada
+- valeu amigo
+- obriagada
+- obrigada eu
+- Obrigado
+- até logo
+- até mais
+- Até mais
+- Até
+- adeus
+- até!
+
+## intent:out_of_scope
+- o que te interessa?
+- Isso o que? moleque?
+- Acontecer o que? cara pálida?
+- você fala sobre o meio ambiente
+- qual a origem do mundo
+- vc gosta de carnaval
+- batatinha quando nasce
+- imbecil
+- imbécil
+- nojento
+- chato
+- babaca
+- feio
+- burro
+- tentando ganhar dinheiro
+- huio uofg huo
+- cavalo de corrida
+- eu quero sair correndo dessa consulta
+- ornitorrinco
+- dkajskdja
+- otorrinicus
+- nanan nanana
+- \
+- cavalo
+- abacaxi
+- carroça
+- Não concordo nem discordo, muito pelo contrário.
+- Uma coisa é uma coisa, outra coisa é outra coisa.
+- Toda regra tem exceção.
+- O ser humano é definido pelo seu vigor, astuto como um zé feliz.
+- O importante é o que importa.
+- O sol nasce, a bicicleta anda, o lobo uiva e o urso panda.
+- A Terra é um dos planetas mais conhecidos no mundo.
+- Qual é o diminutivo de golfinho?
+- Se o vinho é líquido, como pode existir vinho seco?
+- Por que o Halls preto é branco?
+- Por que "tudo junto" se escreve separado e "separado" se escreve tudo junto?
+- Por que o Mar Vermelho é azul?
+- Pobre só enche a barriga quando morre afogado.
+- Jesus salva! Que passa para Moisés, que chuta e é gooooolllll...
+- Em rio de piranhas, jacaré nada de costas.
+- Se tamanho fosse documento o elefante era dono do circo.
+- Por causa da pressa, é que a mosca nasceu sem osso.
+- Na vida tudo é passageiro, menos o motorista e o cobrador…
+- O dinheiro não traz felicidade, então, dê todo o seu pra mim e seja feliz.
+- A vida é uma sucessão de sucessivos que sucedem sucessivamente sem cessar.
+- asdas asdlan asda snd a12
+- adalkn as alsd as12
+- asdas adsadad 12312
+- xasda ad as asda sdasas
+- 1212 asdadad asdasd ds3
+- xablsdabdl asd asldb alsd12
+- Cachorro
+- '
+- Carro paçoca abacaxi
+- mas1
+
+## synonym:feminino
+- mulher
+- fêmea
+- fem
+- menina
+- garota
+- Feminino
+- f
+- F
+
+## synonym:masculino
+- homem
+- macho
+- Masculino
+- masc
+- menino
+- garoto
+- m
+- M
+- maculno
+
+## synonym:outro_genero
+- transgênero
+- trans
+- travesti
+- transexual
+- andrógena
+- Andrógeno
+- Pangênero
+- sem gênero
+- assexual
+- Transexual
+- outro
+- prefiro não dizer

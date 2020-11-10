@@ -1,0 +1,161 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- cumprimentar
+- o_que_e_anamnese
+- pergunta
+- sexo
+- profissao
+- escolaridade
+- outros_sintomas
+- afirmacao
+- negacao
+- obrigado
+- out_of_scope
+- sintoma_febre
+- sintoma_dor
+- sintoma_vomito
+entities:
+- cep
+- endereco
+- escolaridade
+- idade
+- nascimento
+- nome
+- masculino
+- feminino
+- outro_genero
+- o_que_aconteceu
+- o_que_aconteceu_depois
+- profissao
+- quando_foi_isso
+- sexo
+- sinal_sintoma
+- temperature
+- duracao
+- sintomas
+- febre
+- vomito
+- dor
+- onde_doi_exatamente
+- duracao_da_dor
+- time
+- o_que_comeu
+slots:
+  cep:
+    type: unfeaturized
+  dia:
+    type: unfeaturized
+  dor:
+    type: unfeaturized
+  duracao:
+    type: unfeaturized
+  duracao_da_dor:
+    type: unfeaturized
+  endereco:
+    type: unfeaturized
+  escolaridade:
+    type: unfeaturized
+  febre:
+    type: unfeaturized
+  vomito:
+    type: unfeaturized
+  feminino:
+    type: unfeaturized
+  idade:
+    type: unfeaturized
+  temperature:
+    type: unfeaturized
+  masculino:
+    type: unfeaturized
+  nascimento:
+    type: unfeaturized
+  nome:
+    type: unfeaturized
+  o_que_aconteceu:
+    type: unfeaturized
+  o_que_aconteceu_depois:
+    type: unfeaturized
+  onde_doi_exatamente:
+    type: unfeaturized
+  outro_genero:
+    type: unfeaturized
+  profissao:
+    type: unfeaturized
+  quando_foi_isso:
+    type: unfeaturized
+  sexo:
+    type: unfeaturized
+  sinal_sintoma:
+    type: unfeaturized
+  sintomas:
+    type: unfeaturized
+  time:
+    type: unfeaturized
+  o_que_comeu:
+    type: unfeaturized
+responses:
+  utter_ask_cep:
+  - text: "Qual seu CEP? \nExemplo: 72145401"
+  utter_ask_escolaridade:
+  - text: 'Qual sua escolaridade? '
+  utter_ask_nascimento:
+  - text: "Qual sua data de nascimento? \nExemplo: 01/01/2000"
+  utter_ask_nome:
+  - text: 'Qual seu nome completo? '
+  utter_o_que_aconteceu:
+  - text: 'O que aconteceu? '
+  utter_ask_o_que_aconteceu_depois:
+  - text: E depois disso o que aconteceu?
+  utter_ask_profissao:
+  - text: 'Qual sua profissão? '
+  utter_ask_quando_foi_isso:
+  - text: E quando foi isso?
+  utter_ask_sexo:
+  - text: 'Qual seu sexo? '
+  utter_ask_time:
+  - text: 'Você vinha bem até quando? '
+  utter_definicao_anamnese:
+  - text: Anamnese é apenas uma entrevista para que eu possa coletar algumas informações
+      e entender sua queixa. Assim, vou poder te ajudar da melhor forma. Podemos continuar?
+  utter_fora_escopo:
+  - text: "Hummmm... Não sei se entendi. Pode escrever de outra forma?\n "
+  - text: "Acho que não te entendi, você pode me responder de outro jeito?\n "
+  utter_responde_utilidade_pergunta:
+  - text: Essa etapa é importante para que eu possa anotar suas informações básicas,
+      entender sua situação e só então, vou poder te ajudar da melhor forma. Vamos
+      continuar?
+  utter_saldacao:
+  - text: "Olá! Sou o AnamnaBot! \nTenho a finalidade de te ajudar na etapa da anamnese.\
+      \ É simples e rápido, basta responder o que for perguntado. Vamos começar?"
+  utter_ask_temperature:
+  - text: "Sintoma típico de febre. \nQuantos graus de temperatura?"
+  utter_ask_duracao:
+  - text: Quantos dias de febre?
+  utter_ask_sintomas:
+  - text: "Você observou alguns desses sintomas? \nComo: indisposição e mobilidade\
+      \ reduzida, calafrios e tremor ou agitação?"
+  utter_ask_continue:
+  - text: Não entendi o que você quis dizer. O Marcos ainda está me ensinando... Mas
+      você quer continuar?
+  utter_obrigado:
+  - text: Obrigado e até logo!
+  utter_tchau:
+  - text: Tchau {nome}.
+  utter_ask_onde_doi_exatamente:
+  - text: "Vamos tentar descobrir mais sobre a dor. \nSe ainda não disse, onde doi\
+      \ exatamente?"
+  utter_ask_duracao_da_dor:
+  - text: Há quanto tempo sente dor?
+  utter_ask_o_que_comeu:
+  - text: "E o que comeu antes de passar mal?"
+  utter_sintoma_nao_tratado:
+  - text: "Reconhecimento e tratamento do sintoma ainda em desenvolvimento pela equipe\
+      \ do AnamnaBot! \nPor enquanto, só reconhecemos vômito, a febre e dores comuns."
+
+forms:
+- febre_form
+- dados_form
+- dor_form
+- vomito_form
