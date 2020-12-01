@@ -7,9 +7,21 @@
   - form{"name":null}
   - utter_o_que_aconteceu
 * sintoma_febre
-  - febre_form
-  - form{"name":"febre_form"}
-  - form{"name":null}
+  - utter_ask_quando_comecou
+* dias_febre
+  - utter_ask_comecou_repente
+* afirmacao
+  - utter_febre_subito
+  - utter_ask_foi_aferida
+* afirmacao
+  - utter_ask_qual_temperatura
+* temperatura_febre
+  - utter_ask_febre_periodo
+* afirmacao
+  - utter_desenvolvimento_joao
+  - utter_ask_usou_medicacao
+* afirmacao
+  - utter_usou_antipiretico
   - utter_obrigado
 * obrigado
   - utter_tchau
@@ -25,9 +37,20 @@
   - form{"name":null}
   - utter_o_que_aconteceu
 * sintoma_febre
-  - febre_form
-  - form{"name":"febre_form"}
-  - form{"name":null}
+  - utter_ask_quando_comecou
+* dias_febre
+  - utter_ask_comecou_repente
+* negacao
+  - utter_febre_gradual
+  - utter_ask_foi_aferida
+* negacao
+  - utter_nao_aferida
+  - utter_ask_febre_periodo
+* negacao
+  - utter_febre_continua
+  - utter_ask_usou_medicacao
+* negacao
+  - utter_nao_usou_antipiretico
   - utter_obrigado
 * obrigado
   - utter_tchau

@@ -18,7 +18,7 @@ pipeline:
   - name: "DucklingHTTPExtractor"
     # url: "http://localhost:8000"
     url: "http://duckling.rasa.com:8000"
-    dimensions: ["time", "temperature"]
+    dimensions: [temperature"]
     locale: "pt_BR"
   #   timezone: "UTC−03:00"
   #   timeout: 3

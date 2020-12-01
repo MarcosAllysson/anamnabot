@@ -33,7 +33,7 @@ class DadosForm(FormAction):
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """ List de todos os slots que deverão ser preenchidos """
-        return ["nome", "nascimento", "cep", "sexo", "escolaridade", "profissao", "time"]
+        return ["nome", "nascimento", "cep", "sexo", "escolaridade", "profissao", "vinha_bem_ate_quando"]
         # return ["nome"]
         
 
@@ -69,8 +69,8 @@ class DadosForm(FormAction):
                 self.from_entity(entity="profissao"), 
                 self.from_text(intent="profissao")
             ],
-            "time": [
-                self.from_entity(entity="time"),
+            "vinha_bem_ate_quando": [
+                self.from_entity(entity="vinha_bem_ate_quando"),
                 self.from_text()
             ]
         }
@@ -232,20 +232,20 @@ class DadosForm(FormAction):
             return {"profissao": None}
 
 
-    def validate_time(self,
+    def validate_vinha_bem_ate_quando(self,
         value: Text,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
         ) -> Dict[Text, Any]:
-        """ Validando tempo - duckling """ 
+        """ Validando vinha_bem_ate_quando """ 
 
         if (value != None):
-            return {"time":value}
+            return {"vinha_bem_ate_quando":value}
         else:
             # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
             dispatcher.utter_message("Acho que não entendi")
-            return {"time": None}
+            return {"vinha_bem_ate_quando": None}
 
 
     # def validate_vinha_bem_ate_quando(self,
@@ -318,11 +318,11 @@ class DadosForm(FormAction):
         sexo = tracker.get_slot("sexo")
         escolaridade = tracker.get_slot("escolaridade")
         profissao = tracker.get_slot("profissao")
-        # vinha_bem_ate_quando = tracker.get_slot("vinha_bem_ate_quando")
-        time = tracker.get_slot("time")
+        vinha_bem_ate_quando = tracker.get_slot("vinha_bem_ate_quando")
+        # time = tracker.get_slot("time")
 
         # printar mensagem de sucesso  
-        dispatcher.utter_message("Ok! Confirmando seus dados: \nNome: {} \nData de nascimento: {} \nIdade: {} anos \nCEP: {} \nEndereço: {} \nSexo: {} \nEscolaridade: {} \nProfissão: {} \nVinha bem até: {} \nOk.".format(nome, nascimento, idade, cep, endereco_completo, sexo, escolaridade, profissao, time))
+        dispatcher.utter_message("Ok! Confirmando seus dados: \nNome: {} \nData de nascimento: {} \nIdade: {} anos \nCEP: {} \nEndereço: {} \nSexo: {} \nEscolaridade: {} \nProfissão: {} \nVinha bem até: {} \nOk.".format(nome, nascimento, idade, cep, endereco_completo, sexo, escolaridade, profissao, vinha_bem_ate_quando))
         # dispatcher.utter_message("Ok! Confirmando seus dados: \nNome: {} \nVinha bem até: {}.".format(nome, time))
         
         return []
@@ -331,205 +331,205 @@ class DadosForm(FormAction):
 
 
 # FORM TO ANALYSE FEVER
-class FebreForm(FormAction):
-    """ Início do formulário """
-    def name(self) -> Text:
-        """ Nome único do formulário """
-        return "febre_form"
+# class FebreForm(FormAction):
+#     """ Início do formulário """
+#     def name(self) -> Text:
+#         """ Nome único do formulário """
+#         return "febre_form"
 
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        """ List de todos os slots que deverão ser preenchidos """
-        # return ["vinha_bem_ate_quando", "o_que_aconteceu", "o_que_aconteceu_depois", "quando_foi_isso"]
-        return ["temperature", "duracao", "sintomas", "o_que_aconteceu_depois", "quando_foi_isso"]
+#     @staticmethod
+#     def required_slots(tracker: Tracker) -> List[Text]:
+#         """ List de todos os slots que deverão ser preenchidos """
+#         # return ["vinha_bem_ate_quando", "o_que_aconteceu", "o_que_aconteceu_depois", "quando_foi_isso"]
+#         return ["temperature", "duracao", "sintomas", "o_que_aconteceu_depois", "quando_foi_isso"]
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """ Um dicionário para mapear todos os slots necessário para:
-        - extrair entidades
-        - intenções
-        - mensagem inteira
-        ou uma lista de item,  """
+#     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+#         """ Um dicionário para mapear todos os slots necessário para:
+#         - extrair entidades
+#         - intenções
+#         - mensagem inteira
+#         ou uma lista de item,  """
 
-        return{            
-            "temperature":[
-                self.from_entity(entity="temperature"),
-                self.from_text()
-            ],
-            "duracao":[
-                self.from_entity(entity="duracao"),
-                self.from_text()
-            ],
-            "sintomas":[
-                self.from_entity(entity="sintomas"),
-                self.from_text()
-            ],
-            "o_que_aconteceu_depois":[
-                self.from_entity(entity="o_que_aconteceu_depois"),
-                self.from_text()
-            ],
-            "quando_foi_isso":[
-                self.from_entity(entity="quando_foi_isso"),
-                self.from_text()
-            ]
-        }
+#         return{            
+#             "temperature":[
+#                 self.from_entity(entity="temperature"),
+#                 self.from_text()
+#             ],
+#             "duracao":[
+#                 self.from_entity(entity="duracao"),
+#                 self.from_text()
+#             ],
+#             "sintomas":[
+#                 self.from_entity(entity="sintomas"),
+#                 self.from_text()
+#             ],
+#             "o_que_aconteceu_depois":[
+#                 self.from_entity(entity="o_que_aconteceu_depois"),
+#                 self.from_text()
+#             ],
+#             "quando_foi_isso":[
+#                 self.from_entity(entity="quando_foi_isso"),
+#                 self.from_text()
+#             ]
+#         }
 
 
-    def validate_temperature(self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> Dict[Text, Any]:
-        """ Validando graus da febre """
+#     def validate_temperature(self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> Dict[Text, Any]:
+#         """ Validando graus da febre """
         
-        # if value.isdigit() and float(value) > 1:
-        if (value != None):
-            return {"temperature": value}
-            # if float(value) <= 37.5:
-            #     return {"temperature": "Classificação - leve: {} °C".format(value)}
-            # if float(value) >= 37.6 and float(value) <= 38.5:
-            #     return {"temperature": "Classificação - moderada: {} °C".format(value)}
-            # else:
-            #     return {"temperature": "Classificação - alta: {} °C".format(value)}
-        else:
-            dispatcher.utter_message("Não entendi.")
-            return {"temperature": None}
+#         # if value.isdigit() and float(value) > 1:
+#         if (value != None):
+#             return {"temperature": value}
+#             # if float(value) <= 37.5:
+#             #     return {"temperature": "Classificação - leve: {} °C".format(value)}
+#             # if float(value) >= 37.6 and float(value) <= 38.5:
+#             #     return {"temperature": "Classificação - moderada: {} °C".format(value)}
+#             # else:
+#             #     return {"temperature": "Classificação - alta: {} °C".format(value)}
+#         else:
+#             dispatcher.utter_message("Não entendi.")
+#             return {"temperature": None}
 
 
-    def validate_duracao(self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> Dict[Text, Any]:
+#     def validate_duracao(self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> Dict[Text, Any]:
 
-        duracao = int(value)
-        if duracao <= 0:
-            dispatcher.utter_message("Número de dias inválido")
-            return{"duracao": None}
-        elif duracao <= 7:
-            return{"duracao": "Recente (menos de 7 dias)"}
-        else:
-            return{"duracao": "Prolongada (mais de 7 dias)"}
-
-
-    def validate_sintomas(self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> Dict[Text, Any]:
-        """ validando sintomas """
-
-        if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
-            return {"sintomas":value}
-        else:
-            # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
-            dispatcher.utter_message("Não entendi.")
-            return {"sintomas": None}
+#         duracao = int(value)
+#         if duracao <= 0:
+#             dispatcher.utter_message("Número de dias inválido")
+#             return{"duracao": None}
+#         elif duracao <= 7:
+#             return{"duracao": "Recente (menos de 7 dias)"}
+#         else:
+#             return{"duracao": "Prolongada (mais de 7 dias)"}
 
 
-    def validate_o_que_aconteceu_depois(self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> Dict[Text, Any]:
-        """ Validando sintoma - o que aconteceu depois """ 
+#     def validate_sintomas(self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> Dict[Text, Any]:
+#         """ validando sintomas """
 
-        if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
-            return {"o_que_aconteceu_depois":value}
-        else:
-            # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
-            dispatcher.utter_message("Acho que não entendi")
-            return {"o_que_aconteceu_depois": None}
+#         if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
+#             return {"sintomas":value}
+#         else:
+#             # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
+#             dispatcher.utter_message("Não entendi.")
+#             return {"sintomas": None}
 
 
+#     def validate_o_que_aconteceu_depois(self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> Dict[Text, Any]:
+#         """ Validando sintoma - o que aconteceu depois """ 
 
-    def validate_quando_foi_isso(self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> Dict[Text, Any]:
-        """ Validação para extrair data - 'quando foi isso' """
-
-        if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
-            return {"quando_foi_isso":value}
-        else:
-            # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
-            dispatcher.utter_message("Acho que não entendi")
-            return {"quando_foi_isso": None}
-
-        # # date_input = value
-        # tempo = tracker.get_slot("tempo")
-        # dia_extraido = tracker.get_slot("dia")
-        # user_input = value
-        # dia = date.today().day
-        # mes = date.today().month
-        # ano = date.today().year
-
-        # if (tempo == "hoje" or tempo == "hj"):
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (tempo == "agora" or tempo == "a noite" or tempo == "à noite" or tempo == "de noite" or tempo == "a tarde" or tempo == "à tarde" or tempo == "de tarde" or tempo == "de manhã" or tempo == "pela manha" or tempo == "manha" or tempo == "manhã"):
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (tempo == "ontem" or tempo == "onti" or tempo == "ante ontem" or tempo == "antes de ontem"):
-        #     dia -= 1
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (dia_extraido == "domingo" or dia_extraido == "segunda" or dia_extraido == "terça" or dia_extraido == "terca" or dia_extraido == "quarta" or dia_extraido == "quinta" or dia_extraido == "sexta" or dia_extraido == "sabado" or dia_extraido == "sábado"):
-        #     dia -= 7
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (tempo == "semana" or tempo == "semana passada" or tempo == "semanas"):
-        #     dia -= 7
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (tempo == "mes" or tempo == "mês" or tempo == "mes passado" or tempo == "mês passado" or tempo == "meses"):
-        #     mes -= 1
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # if (tempo == "ano" or tempo == "ano passado" or tempo == "anos"):
-        #     ano -= 1
-        #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
-        #     return{"quando_foi_isso":data_extraida}
-
-        # else:
-        #     data_extraida = "paciente disse: '{}', não consegui estipular data aproximada.".format(user_input)
-        #     return{"quando_foi_isso":data_extraida}
+#         if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
+#             return {"o_que_aconteceu_depois":value}
+#         else:
+#             # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
+#             dispatcher.utter_message("Acho que não entendi")
+#             return {"o_que_aconteceu_depois": None}
 
 
 
+#     def validate_quando_foi_isso(self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> Dict[Text, Any]:
+#         """ Validação para extrair data - 'quando foi isso' """
 
-    def submit(self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-        ) -> List[Dict]:
-        """ Depois de ter coletado todos os slots, fazer o submit """
+#         if re.findall(r"([a-zA-Z])\D*([a-zA-Z])$", value):
+#             return {"quando_foi_isso":value}
+#         else:
+#             # se não foi encontrado, slot recebe None, disparada a mensagem e será perguntado novamente
+#             dispatcher.utter_message("Acho que não entendi")
+#             return {"quando_foi_isso": None}
 
-        # coletando dados e salvando em variáveis
+#         # # date_input = value
+#         # tempo = tracker.get_slot("tempo")
+#         # dia_extraido = tracker.get_slot("dia")
+#         # user_input = value
+#         # dia = date.today().day
+#         # mes = date.today().month
+#         # ano = date.today().year
 
-        temperature = tracker.get_slot("temperature")
-        duracao = tracker.get_slot("duracao")
-        sintomas = tracker.get_slot("sintomas")
+#         # if (tempo == "hoje" or tempo == "hj"):
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
 
-        o_que_aconteceu_depois = tracker.get_slot("o_que_aconteceu_depois")
-        quando_foi_isso = tracker.get_slot("quando_foi_isso")
+#         # if (tempo == "agora" or tempo == "a noite" or tempo == "à noite" or tempo == "de noite" or tempo == "a tarde" or tempo == "à tarde" or tempo == "de tarde" or tempo == "de manhã" or tempo == "pela manha" or tempo == "manha" or tempo == "manhã"):
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
 
-        # printar mensagem de sucesso  
-        #dispatcher.utter_message("Certo {}! Confirmando sua queixa:\n\n Vinha bem até: {}\n O que aconteceu: {}\n Aconteceu depois: {}\n Quando foi isso: {} \n \n Ok, tudo certo! Vou repassar as informações ao médico para continuarmos sua consulta. Obrigado e até logo.".format(nome, vinha_bem_ate_quando, o_que_aconteceu, o_que_aconteceu_depois, quando_foi_isso))
-        dispatcher.utter_message("Certo! Confirmando queixa da febre: \nTemperatura: {} \nDuração: {} \nSente sintomas descritos? {} \nAconteceu depois: {} \nQuando foi isso: {} \nOk, tudo certo! Vou repassar as informações ao médico para continuarmos sua consulta.".format(temperature, duracao, sintomas, o_que_aconteceu_depois, quando_foi_isso))
+#         # if (tempo == "ontem" or tempo == "onti" or tempo == "ante ontem" or tempo == "antes de ontem"):
+#         #     dia -= 1
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
+
+#         # if (dia_extraido == "domingo" or dia_extraido == "segunda" or dia_extraido == "terça" or dia_extraido == "terca" or dia_extraido == "quarta" or dia_extraido == "quinta" or dia_extraido == "sexta" or dia_extraido == "sabado" or dia_extraido == "sábado"):
+#         #     dia -= 7
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
+
+#         # if (tempo == "semana" or tempo == "semana passada" or tempo == "semanas"):
+#         #     dia -= 7
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
+
+#         # if (tempo == "mes" or tempo == "mês" or tempo == "mes passado" or tempo == "mês passado" or tempo == "meses"):
+#         #     mes -= 1
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
+
+#         # if (tempo == "ano" or tempo == "ano passado" or tempo == "anos"):
+#         #     ano -= 1
+#         #     data_extraida = "paciente disse: '{}', data aproximada: {}/{}/{}".format(user_input, dia, mes, ano)
+#         #     return{"quando_foi_isso":data_extraida}
+
+#         # else:
+#         #     data_extraida = "paciente disse: '{}', não consegui estipular data aproximada.".format(user_input)
+#         #     return{"quando_foi_isso":data_extraida}
+
+
+
+
+#     def submit(self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: Dict[Text, Any],
+#         ) -> List[Dict]:
+#         """ Depois de ter coletado todos os slots, fazer o submit """
+
+#         # coletando dados e salvando em variáveis
+
+#         temperature = tracker.get_slot("temperature")
+#         duracao = tracker.get_slot("duracao")
+#         sintomas = tracker.get_slot("sintomas")
+
+#         o_que_aconteceu_depois = tracker.get_slot("o_que_aconteceu_depois")
+#         quando_foi_isso = tracker.get_slot("quando_foi_isso")
+
+#         # printar mensagem de sucesso  
+#         #dispatcher.utter_message("Certo {}! Confirmando sua queixa:\n\n Vinha bem até: {}\n O que aconteceu: {}\n Aconteceu depois: {}\n Quando foi isso: {} \n \n Ok, tudo certo! Vou repassar as informações ao médico para continuarmos sua consulta. Obrigado e até logo.".format(nome, vinha_bem_ate_quando, o_que_aconteceu, o_que_aconteceu_depois, quando_foi_isso))
+#         dispatcher.utter_message("Certo! Confirmando queixa da febre: \nTemperatura: {} \nDuração: {} \nSente sintomas descritos? {} \nAconteceu depois: {} \nQuando foi isso: {} \nOk, tudo certo! Vou repassar as informações ao médico para continuarmos sua consulta.".format(temperature, duracao, sintomas, o_que_aconteceu_depois, quando_foi_isso))
         
-        return []
+#         return []
 
 
 

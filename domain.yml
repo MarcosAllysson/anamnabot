@@ -14,6 +14,8 @@ intents:
 - obrigado
 - out_of_scope
 - sintoma_febre
+- dias_febre
+- temperatura_febre
 - sintoma_dor
 - sintoma_vomito
 entities:
@@ -40,7 +42,7 @@ entities:
 - dor
 - onde_doi_exatamente
 - duracao_da_dor
-- time
+- vinha_bem_ate_quando
 - o_que_comeu
 slots:
   cep:
@@ -91,7 +93,7 @@ slots:
     type: unfeaturized
   sintomas:
     type: unfeaturized
-  time:
+  vinha_bem_ate_quando:
     type: unfeaturized
   o_que_comeu:
     type: unfeaturized
@@ -114,7 +116,7 @@ responses:
   - text: E quando foi isso?
   utter_ask_sexo:
   - text: 'Qual seu sexo? '
-  utter_ask_time:
+  utter_ask_vinha_bem_ate_quando:
   - text: 'Você vinha bem até quando? '
   utter_definicao_anamnese:
   - text: Anamnese é apenas uma entrevista para que eu possa coletar algumas informações
@@ -153,6 +155,66 @@ responses:
   utter_sintoma_nao_tratado:
   - text: "Reconhecimento e tratamento do sintoma ainda em desenvolvimento pela equipe\
       \ do AnamnaBot! \nPor enquanto, só reconhecemos vômito, a febre e dores comuns."
+
+  # FEBRE
+  utter_ask_quando_comecou: 
+  - text: "Começou há quantos dias?"
+
+  utter_ask_comecou_repente:
+  - buttons:
+    - payload: "/afirmacao"
+      title: "Sim."
+    - payload: "/negacao"
+      title: "Não."
+    text: "Começou de repente?"
+
+  utter_febre_subito:
+  - text: "Febre de início súbito."
+
+  utter_febre_gradual:
+  - text: "Febre de início gradual."
+
+  utter_ask_foi_aferida: 
+  - buttons:
+    - payload: "/afirmacao"
+      title: "Sim, foi."
+    - payload: "/negacao"
+      title: "Não."
+    text: "Foi aferida?"
+
+  utter_ask_qual_temperatura:
+  - text: "Qual temperatura?"
+
+  utter_nao_aferida:
+  - text: "Não aferida."
+
+  utter_ask_febre_periodo:
+  - buttons:
+    - payload: "/afirmacao"
+      title: "Sim!"
+    - payload: "/negacao"
+      title: "Não."
+    text: "A febre passava em algum período do dia?"
+
+  utter_desenvolvimento_joao:
+  - text: "Em desenvolvimento com o João..."
+
+  utter_febre_continua:
+  - text: "Febre contínua."
+
+  utter_ask_usou_medicacao: 
+  - buttons:
+    - payload: "/afirmacao"
+      title: "Sim, usei."
+    - payload: "/negacao"
+      title: "Não."
+    text: "Usou alguma medicação?"
+
+  utter_usou_antipiretico:
+  - text: "Refere uso de antipirético."
+
+  utter_nao_usou_antipiretico: 
+  - text: "Nega uso de antitérmicos."
 
 forms:
 - febre_form

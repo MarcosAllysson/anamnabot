@@ -350,6 +350,7 @@
 - [Terapeuta ocupacional](profissao)
 - [empresario](profissao)
 - [engenheiro](profissao)
+- [Dono](profissao)
 - [Neurocientista](profissao)
 - sou [empresario](profissao)
 - sou [ator](profissao)
@@ -367,8 +368,7 @@
 - estou com [febre](febre)
 - corpo muito quente
 - acho que tô com [febre](febre)
-- minha temperatura mede 37,8°C 
-- estou com 37,8°C, acho que estou com [febre](febre)
+- acho que estou com [febre](febre)
 - suor
 - tremedeira
 - perda de apetite
@@ -378,6 +378,25 @@
 - dores musculares
 - me sinto [cansado](febre) pra tudo
 - sinto [cansaço](febre) e não tenho vontade de fazer nada
+
+## intent: dias_febre
+- começou há 3 dias
+- comecei a sentir faz uma semana
+- 3 dias
+- uma semana
+- 1 semanas
+- 1 mes
+- varios dias
+- já tem muito tempo
+- há pouco tempo
+
+## intent: temperatura_febre
+- 23 graus
+- minha temperatura mede 37,8°C 
+- 38 graus celcius
+- estou com 37,8°C
+- 38
+- 42
 
 ## intent: sintoma_dor
 - sinto [dor](dor) no lado esquerdo
